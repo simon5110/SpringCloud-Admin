@@ -6,7 +6,7 @@
         <h3 class="title">Login Form</h3>
       </div>
 
-      <el-form-item prop="username">
+      <el-form-item prop="">
         <span class="svg-container">
           <svg-icon icon-class="user" />
         </span>
@@ -22,7 +22,7 @@
       </el-form-item>
 
       <el-tooltip v-model="capsTooltip" content="Caps lock is On" placement="right" manual>
-        <el-form-item prop="password">
+        <el-form-item prop="">
           <span class="svg-container">
             <svg-icon icon-class="password" />
           </span>
@@ -93,8 +93,8 @@ export default {
     }
     return {
       loginForm: {
-        username: 'admin',
-        password: 'password'
+        username: this.username,
+        password: this.password
       },
       loginRules: {
         username: [{ required: true, trigger: 'blur', validator: validateUsername }],
